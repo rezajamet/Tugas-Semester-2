@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <style>
+        #bar{
+            border-color: black;
+            width: 90%;
+            border-width: 1px;
+            border-style: solid;
+            height: 35px;
+            background-color: whitesmoke;
+        }
+
+        #proggres{
+            width: 0.1%;
+            border-width: 1px;
+            border-style: solid;
+            height: 35px;
+            background-color: azure ;
+            float: left;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Penghitung Karakter</h1>
+        <br>
+        <textarea name='ulasan' id='ulasan' rows="4" cols="60" onkeyup="teks()" maxlength="50"></textarea>
+        <br>
+        <h3>Jumlah huruf : <span id ='hitung'></span></h3>
+        <div id='bar'>
+            <div id='proggres'></div>
+        </div>
+    </center>
+
+    <script>
+    
+    var bar = document.getElementById('proggres');
+    var width = 1
+
+    document.getElementById('ulasan').onkeyup = function () {
+    document.getElementById('hitung').innerHTML = this.value.length ;
+    width =  this.value.length * 2;
+    bar.style.width = width + "%";
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body{
+    padding:0px;
+    margin: 0px;
+    background: #e1e1e1;
+}
+
+.header{
+    background: rgba(0,0,0,0.9);
+    padding: 6px 24px;
+    text-align: left;
+    color: white;
+    margin:0px;
+    letter-spacing: 1px;
+    font: caption ;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.menu{
+    position: relative;
+    word-spacing: 30px;
+    padding:10px 10px 10px 10px;
+    width: 100%;
+    background-color: darkturquoise;
+    text-align: center;
+    font: arial;
+    font-size: 15px;
+    color: aliceblue;
+    float: left;
+}
+
+.menu a:link {
+    color:white;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color:black;
+    background-color: #fff;
+}
+
+
+.video-container{
+    position: relative;
+    z-index:-1;
+    top:0px;
+}
+
+.video-container iframe{
+    width:100%;
+    height:90vh;
+}
+
+.content{
+    padding:0px 24px;
+    text-align: justify;
+    font-size:20px;
+}

@@ -1,0 +1,44 @@
+
+.box{
+margin:10px 15px; padding:5px 0; background: cyan; border-radius: 15px ;
+}
+
+#tulisan1{
+    color:blue; text-align: center ; font-family:sans-serif;text-shadow: 2px 2px #555
+}
+
+.background{
+    margin:10px 15px;padding:10px;background: green ; display:grid;grid-template-columns: repeat(12,1fr);column-gap:12px;border-radius: 15px;
+}
+
+.box2{
+    margin:10px;padding:0 10px; background: #90e07e;grid-column: 1/span3;max-width:500px;display:contents;
+}
+
+#list{
+    list-style-type: none;padding:10px
+}
+
+#isilist1{
+    margin:10px 0 ; background : #ecfa91;padding-right:100px;padding-bottom: 10px;padding-left: 10px;padding-top: 10px
+}
+
+.isilist{
+    margin:10px 0 ; background : #ecfa91;padding:10px;
+}
+
+#box3{
+    margin:10px;padding: 10px;background: #90e07e;grid-column: 4/span 9;
+}
+
+.warnas{
+    color:#0b872c
+}
+
+#boxbawah {
+    margin:10px 15px;padding:5px 0;background: #e3b059;border-radius: 15px
+}
+
+#tulisanbawah {
+    color:#b03f25;text-align:center;font-family:monospace
+}

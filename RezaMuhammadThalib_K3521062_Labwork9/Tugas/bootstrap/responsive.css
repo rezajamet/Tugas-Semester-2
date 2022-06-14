@@ -1,0 +1,76 @@
+@media (max-width: 580px){
+    #kritik{
+        margin-top: 1.3em;
+    }
+
+    .navbar{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .row p{
+        font-size: 1em;
+        font-weight: lighter;
+    }
+
+    .navbar-brand{
+        margin-left: 0.3em;
+    }
+
+    .nav-link{
+        margin-right: 0.9em;
+    }
+
+    .main-footer{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        opacity: 20%;
+        line-height: 15px;
+        font-size: 10px;
+        position: relative;
+    }
+
+    .kritik{
+        margin-top: 1.3em;
+    }
+    .main-footer p:hover{
+        color:beige;
+        font-size: xx-small;
+    }
+}
+
+@media screen and (min-device-width: 581px) and (max-device-width: 1081px) { 
+    .body{
+        height: 500px;
+    }
+    
+    .navbar{
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .main-footer{
+        padding-left: 3em;
+        padding-right: 3em;
+        opacity: 20%;
+        line-height: 15px;
+        font-size: 12px;
+        position: relative;
+    }
+
+    .kritik{
+        margin-top: 1.3em;
+    }
+
+    .row p{
+        font-size: 1em;
+        font-weight: lighter;
+    }
+
+    .main-footer p:hover{
+        color:beige;
+        font-size:xx-small;
+    }
+}

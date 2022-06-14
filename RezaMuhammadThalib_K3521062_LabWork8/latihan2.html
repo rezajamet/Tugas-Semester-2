@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        
+        body center{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+
+        center h1{
+            font-size: 35px;
+        }
+
+        #jam,#menit,#detik{
+            font-size: 50px;
+            font-weight: 1200;
+            position: relative;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #start{
+            text-align: center;
+            font-size: 12px;
+            font-weight: 200;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .titik{
+            font-size: 50px;
+            font-weight: 1200;
+            position: relative;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #jam.active{
+            display: none;
+        }
+
+        #menit.active{
+            display: none;
+        }
+
+        #detik.active{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Placeholder Jam</h1>
+        <br>
+        <span id="jam">00</span>
+        <span class="titik">:</span>
+        <span id="menit">00</span>
+        <span class="titik">:</span>
+        <span id="detik">00</span>
+        <br>
+        <button id="start">START/STOP</button>
+    </center>
+
+    <script type="text/javascript">
+
+        function jam(){
+            var dateTime = new Date();
+            var hrs = dateTime.getHours();
+            var min = dateTime.getMinutes();
+            var sec = dateTime.getSeconds();
+
+            if(hrs<=9){
+                hrs = '0'+hrs
+            }
+
+            if(min<=9){
+                min = '0'+min
+            }
+
+            if(sec<=9){
+                sec = '0'+sec
+            }
+
+        document.getElementById('jam').innerHTML = hrs;
+        document.getElementById('menit').innerHTML = min;
+        document.getElementById('detik').innerHTML = sec;
+   
+        }
+
+        function clock(){
+                document.getElementById('jam').innerHTML = '00';
+                document.getElementById('menit').innerHTML = '00';
+                document.getElementById('detik').innerHTML = '00';
+            }
+
+        var x = 1
+    
+        $(document).ready(function(){
+            $('#start').click(function(){
+                if (x%2 !=0){
+                    jam()
+                    x+=1
+                    interval = setInterval(jam, 1000);
+                }else{
+                    clock()
+                    x+=1
+                    clearInterval(interval);
+                }
+            })
+        })
+                
+    
+    </script>
+</body>
+</html>
